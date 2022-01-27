@@ -9,11 +9,13 @@ source:
   sha256: 6c23113e87bad393308c90a207013e505f659274736638d8c79bac9c67cc3e19
 
 build:
-  number: 0
+  number: 1
   script: "perl Makefile.PL INSTALLDIRS=site && make && make test && make install"
   skip: True  # [win]
 
 requirements:
+  build:
+    - make
   host:
     - perl
   run:
