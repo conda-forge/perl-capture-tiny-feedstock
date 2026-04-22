@@ -1,4 +1,4 @@
-{% set version = "0.48" %}
+{% set version = "0.50" %}
 
 package:
   name: perl-capture-tiny
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Capture-Tiny-{{ version }}.tar.gz
-  sha256: 6c23113e87bad393308c90a207013e505f659274736638d8c79bac9c67cc3e19
+  sha256: ca6e8d7ce7471c2be54e1009f64c367d7ee233a2894cacf52ebe6f53b04e81e5
 
 build:
-  number: 1
+  number: 0
   script: "perl Makefile.PL INSTALLDIRS=site && make && make test && make install"
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
